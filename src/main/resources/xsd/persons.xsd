@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:c="commons.xml.acme.org"
+           elementFormDefault="qualified" targetNamespace="persons.xml.acme.org">
+
+    <xs:import namespace="commons.xml.acme.org" schemaLocation="commons.xsd"/>
+
+    <xs:element name="persons">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="person" nillable="true" type="c:nameType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="3.0" xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+               xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix"
+>
+
+    <jaxb:globalBindings localScoping="toplevel">
+    </jaxb:globalBindings>
+
+    <jaxb:bindings schemaLocation="../resources/xsd/commons.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.acme.xml.commons"/>
+        </jaxb:schemaBindings>
+        <jaxb:bindings>
+            <namespace:prefix name="c" />
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../resources/xsd/persons.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.acme.xml.persons"/>
+        </jaxb:schemaBindings>
+        <jaxb:bindings>
+            <namespace:prefix name="acme" />
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../resources/xsd/users.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.acme.xml.users"/>
+        </jaxb:schemaBindings>
+        <jaxb:bindings>
+            <namespace:prefix name="acme" />
+        </jaxb:bindings>
+    </jaxb:bindings>
+
+</jaxb:bindings>

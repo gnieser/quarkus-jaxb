@@ -29,7 +29,7 @@ public class XmlResource {
     @Produces(MediaType.APPLICATION_XML)
     public Response users() {
         Users users = usersObjectFactory.createUsers();
-        users.setUser(buildList());
+        users.getUser().addAll(buildList());
         return Response.ok(users).build();
     }
 
@@ -38,12 +38,12 @@ public class XmlResource {
     @Produces(MediaType.APPLICATION_XML)
     public Response persons() {
         Persons persons = personsObjectFactory.createPersons();
-        persons.setPerson(buildList());
+        persons.getPerson().addAll(buildList());
         return Response.ok(persons).build();
     }
 
     private List<NameType> buildList() {
-        NameType nameType = commonsObjectFactory.createUserType();
+        NameType nameType = commonsObjectFactory.createNameType();
         nameType.setFirstName("Rosalind");
         nameType.setLastName("Franklin");
         return List.of(nameType);
